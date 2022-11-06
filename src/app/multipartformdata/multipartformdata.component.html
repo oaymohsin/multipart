@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <form class="row g-3" [formGroup]="myformgroup">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-6">
+        <label for="" class="tag">Select Size</label>
+         <div class="mb-3">
+           <ng-container *ngFor="let items of selectsize">
+           <input type="checkbox" class="form-check-input" [value]="items" [id]="items"/>
+           <label class="form-check-label mx-2" [for]="items">
+            {{items}}
+           </label>
+        </ng-container>
+         </div>
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Select Cateogaries</label>
+          <select id="inputState" class="form-select">
+            <option *ngFor="let cateogary of categories">{{cateogary}}</option>
+          </select>
+        </div>
+        <div class="col-md-8">
+            <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+</div>

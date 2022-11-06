@@ -15,7 +15,9 @@ export class MultipartformdataComponent implements OnInit {
     // private formBuider:FormBuilder,
     // private ToastrService:ToastrService,
    
-    ) { }
+    ) { } 
+
+    
 
   ngOnInit(): void {
   }
